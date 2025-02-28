@@ -25,6 +25,15 @@ namespace Calculadora
      case operacao.subtracao:
         Resultado = valor - Convert.ToDecimal(txtResultado.Text);
         break
+
+            case operacao.multiplicacao
+        Resultado = valor * Convert.ToDecimal(txtResultado.Text);
+        break
+
+
+
+
+
        }
     txtResultado.Text = Convert.ToString(resultado);
      }
