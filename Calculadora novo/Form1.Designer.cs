@@ -69,6 +69,7 @@
             button10.TabIndex = 18;
             button10.Text = "/";
             button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click_1;
             // 
             // button11
             // 
@@ -79,6 +80,7 @@
             button11.TabIndex = 19;
             button11.Text = "-";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click_1;
             // 
             // button12
             // 
@@ -89,6 +91,7 @@
             button12.TabIndex = 21;
             button12.Text = "C";
             button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click_1;
             // 
             // button13
             // 
@@ -99,6 +102,7 @@
             button13.TabIndex = 23;
             button13.Text = "+";
             button13.UseVisualStyleBackColor = false;
+            button13.Click += button13_Click;
             // 
             // button14
             // 
@@ -108,6 +112,7 @@
             button14.TabIndex = 24;
             button14.Text = "*";
             button14.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
             // 
             // button15
             // 
@@ -148,6 +153,7 @@
             button9.TabIndex = 28;
             button9.Text = "=";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click_1;
             // 
             // button16
             // 
@@ -227,6 +233,7 @@
             button7.TabIndex = 36;
             button7.Text = ",";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click_1;
             // 
             // label1
             // 

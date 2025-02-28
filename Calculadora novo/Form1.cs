@@ -146,5 +146,40 @@ namespace Calculadora_novo
         {
             AddDisplay("0");
         }
+
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            AddDisplay(",");
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            AddDisplay("*");
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            AddDisplay("/");
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            AddDisplay("-");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            AddDisplay("+");
+        }
     }
 }
