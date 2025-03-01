@@ -6,6 +6,20 @@ namespace Calculadora_novo
         {
             InitializeComponent();
         }
+        //declarei a variaveis em propriedades get recupera/atibui o valor  e set define o valor da variavel
+        private operacoes operacaoAtual { get; set; }
+        private decimal valor { get; set; }
+        private decimal resultado { get; set; }
+
+        //criei um enum para nomear e definir as operacoes
+        private enum operacoes
+        {
+
+            Adicao,
+            Subtracao,
+            Multiplicacao,
+            Divisao
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -74,7 +88,7 @@ namespace Calculadora_novo
 
         private void button11_Click(object sender, EventArgs e)
         {
-            textBox1.Text = ",";
+            AddDisplay(",");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -86,15 +100,14 @@ namespace Calculadora_novo
 
         private void button12_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
+
             textBox1.Text = "=";
         }
+        // Fórmula para adicionar o numero no display
         private void AddDisplay(string number)
         {
             textBox1.Text = textBox1.Text + number;
-        }
-        private void buttonlimpar_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -144,6 +157,7 @@ namespace Calculadora_novo
 
         private void button8_Click_1(object sender, EventArgs e)
         {
+
             AddDisplay("0");
         }
 
@@ -154,32 +168,49 @@ namespace Calculadora_novo
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-            AddDisplay(",");
+            textBox1.Text = (",");
         }
 
         private void button9_Click_1(object sender, EventArgs e)
         {
-
+            // Switch Fórmula para adicionar o numero no display quando apertar o botao de igual 
+            switch (operacaoAtual) { }
+           // para aparecer o resultado na tela
+            textBox1.Text = Convert.ToString(resultado);
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            AddDisplay("*");
+
+            operacaoAtual = operacoes.Multiplicacao;
+            valor = Convert.ToDecimal(textBox1.Text);
+            textBox1.Text = "";
+
         }
 
         private void button10_Click_1(object sender, EventArgs e)
         {
-            AddDisplay("/");
+
+            operacaoAtual = operacoes.Divisao;
+            valor = Convert.ToDecimal(textBox1.Text);
+            textBox1.Text = "";
         }
 
         private void button11_Click_1(object sender, EventArgs e)
         {
-            AddDisplay("-");
+
+            operacaoAtual = operacoes.Subtracao;
+            valor = Convert.ToDecimal(textBox1.Text);// Estou atribuindo o valor do texto a variavel valor da formula
+            textBox1.Text = "";
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            AddDisplay("+");
+            operacaoAtual = operacoes.Adicao;
+            valor = Convert.ToDecimal(textBox1.Text);
+            textBox1.Text = "";
+
         }
+ 
     }
 }
