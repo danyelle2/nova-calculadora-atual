@@ -6,6 +6,7 @@ namespace Calculadora_novo
         {
             InitializeComponent();
         }
+
         //declarei a variaveis em propriedades get recupera/atibui o valor  e set define o valor da variavel
         private operacoes operacaoAtual { get; set; }
         private decimal valor { get; set; }
@@ -104,7 +105,7 @@ namespace Calculadora_novo
 
             textBox1.Text = "=";
         }
-        // F�rmula para adicionar o numero no display
+        // Fórmula para adicionar o numero no display
         private void AddDisplay(string number)
         {
             textBox1.Text = textBox1.Text + number;
@@ -173,8 +174,31 @@ namespace Calculadora_novo
 
         private void button9_Click_1(object sender, EventArgs e)
         {
-            // Switch F�rmula para adicionar o numero no display quando apertar o botao de igual 
-            switch (operacaoAtual) { }
+            // Switch Fórmula para adicionar o numero no display quando apertar o botao de igual 
+            switch (operacaoAtual) { 
+            case operacoes.Adicao:
+                    resultado = valor + Convert.ToDecimal(textBox1.Text);
+                    break;
+                case operacoes.Subtracao:
+                    resultado = valor - Convert.ToDecimal(textBox1.Text);
+                    break;
+                case
+                    operacoes.Multiplicacao:
+                    resultado = valor* Convert.ToDecimal(textBox1.Text);
+                    break;
+                case 
+                    operacoes.Divisao:
+                    if (Convert.ToDecimal (textBox1.Text) == 0)// se e senão (se o valor for igual a zero não dividir)
+                    {
+                        textBox1.Text = "ERRO!!\n Não é possivel dividir o número 0";
+                    }
+                    else
+                    {
+                        resultado = valor / Convert.ToDecimal(textBox1.Text);
+                    }
+                        break;
+            }
+            
            // para aparecer o resultado na tela
             textBox1.Text = Convert.ToString(resultado);
         }
@@ -212,5 +236,8 @@ namespace Calculadora_novo
 
         }
  
+
+
+ master
     }
 }
