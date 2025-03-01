@@ -6,6 +6,11 @@ namespace Calculadora_novo
         {
             InitializeComponent();
         }
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+           
+            switch (operacaoAtual)
+            {
                 case
                     
                     operacoes.Multiplicacao:
