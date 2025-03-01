@@ -7,23 +7,14 @@ namespace Calculadora
     {
         static void Main(string[] args)
         {
-                    
-         
-     {
-      case operacoes.Adicao:
-        Resultado = valor + Convert.ToDecimal(txtResultado.Text);
-        break
 
 
-     case operacoes.Subtracao:
-        Resultado = valor - Convert.ToDecimal(txtResultado.Text);
-        break
+            {
 
-            
-       }
-    txtResultado.Text = Convert.ToString(resultado);
-     }
-    } 
+            }
+        }
+    }
 }
-      
-    
+
+
+
