@@ -21,7 +21,7 @@ namespace Calculadora_novo
                     {
                         resultado = valor / Convert.ToDecimal(textBox1.Text);
                     }
-break;
+
             }
     }
 }
