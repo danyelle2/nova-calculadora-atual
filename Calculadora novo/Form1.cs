@@ -189,9 +189,12 @@ namespace Calculadora_novo
                 case 
                     Operacoes.Divisao:
 
-                    if (Convert.ToDecimal (textBox1.Text) == 0)// se o valor for igual a zero não dividir)
-                    
-                        textBox1.Text = "ERRO!! Zero não é divisivel.";
+                    if (textBox1.Text == "0")// se o valor for igual a zero não dividir)
+
+                    {
+                        textBox1.Text = "ERRO!! Zero não é divisivel."; // colocado o comando return ao invés do break para não executar o resto do código
+                        return;
+                    }
                                      
                     if (Convert.ToDecimal(textBox1.Text) != 0)// senão dividir)
                     
